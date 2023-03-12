@@ -1,0 +1,36 @@
+
+--> make a file type.d.ts at root and define return types there in this file.
+--> make a folder [...data] and in that folder make a page.ts for dynamic routing,  by ...data we can get multiple data
+
+
+//dynamic metadata
+--->use this function to generate dynamic metadata according to docs 
+//return type of generateMetadata() must be Promise<Metadata>
+export async function generateMetadata():Promise<Metadata>{
+// logic goes here like to call function or get parameters etc
+return {
+    title: title goes here(example document.title),
+    description: desc goes here,
+  }}
+
+--> make a lib folder at root and in that folder all the function files like getUser.ts,getAllUser.ts etc and import them in that 
+    file where we want to use that func.
+
+-->suspense boundaries
+   suspense deals with the asyn actions,  showing fallback UI , and return the comp when async actions been done.
+   suspense tag k andr fallback attribute aye ga jis me loading comp ya kisi b tag me wo show kraye gy jo user ko dikhy,
+   or suspence tag k andr wo comp dein gy jo async actions perform hony k bd load ho jay to fallback khtm ho jay ga.(i.e loading state=true,false)
+
+
+--> errors handling global level
+    make a file at root named error.ts and in that file it contains a globalError function which will be rendered if any error happens, from error
+    place we throw new Error(),displayed in that error.tsx (its alaways good to make an error file).
+
+--> (auth) folder means hidden directory , just to understand.
+    in (auth) folder we can make login, sign up page etc. auth will not be in route. example http://localhost/login  auth will not be used coz its hidden.
+
+
+
+
+
+
